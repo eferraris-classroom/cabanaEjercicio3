@@ -1,19 +1,20 @@
 package ar.edu.undef.fie;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int [] numeros = {1 , 3 , 0 , 5 , 8};
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        for (var numero: numeros){
+            if (numero > max)
+                max = numero;
+            if (numero < min)
+                min = numero;
+            System.out.println(numero);
         }
+        System.out.println("El máximo es: " + max);
+        System.out.println("El mínimo es: " + min);
     }
+
 }
